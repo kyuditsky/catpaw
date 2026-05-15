@@ -1,0 +1,73 @@
+
+
+05/11/26
+new project
+
+beckhoff gear:
+
+
+insulated bananajack input	//pomona 73099 or equiv
+to
+voltage divider & PSU
+	rac15-24k/480	//sff through hole part, AC to DC psu
+		100-480VAC input
+		15 -output power
+		24 -output voltage
+	
+	add 600VAC, 2A external fuse, on L1
+	creepage/clearance 8mm for 480v
+	
+
+output thru m12 A code 5 pin
+	metric 12 threaded
+	A coded
+	5 contacts
+	female socket on board 
+	mouser example: straight throughhole phoenix contact 1551448
+			right angle through hole phoenix contact 1436644
+	https://www.amazon.com/gp/product/B0FJWNNPST/ref=ewc_pr_img_2?smid=A3N6VO6KHWVD9F&th=1
+
+switch to shutoff PSU
+	onboard, passive or relay?	//where would it get power lol
+	right angle pcb/panel mount toggle
+		https://lovemyswitches.com/taiway-dpdt-on-on-switch-right-angle-pcb-short-shaft/
+	next to M12 conn
+	will disconnect the secondary side of the PSU
+		small form factor 480v toggle is hard-to-find
+
+
+feeds into EP4374-0002
+	https://www.beckhoff.com/en-us/products/i-o/ethercat-box/epxxxx-industrial-housing/ep3xxx-analog-input/ep4374-0002.html
+	etherCAT box, 2 channel
+	analog inputs 
+
+basic scheme created:
+	/may/maydraft01.png
+	1.5hr
+
+3.5 hr design time
+
+
+05/12/26
+3hr INA826 addition & adjustments
+
+possible different case option
+	https://www.hammfg.com/part/1555C2GY
+
+https://lovemyswitches.com/taiway-dpdt-on-on-switch-right-angle-pcb-short-shaft/
+switch:
+Part# 100-DP1-T200B1M6QE
+
+
+
+*bananajacks
+*switch
+*psu
+*resistors
+*buffer
+*RA m12 conn
+*fuse
+
+led
+
+
