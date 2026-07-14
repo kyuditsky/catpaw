@@ -71,3 +71,223 @@ Part# 100-DP1-T200B1M6QE
 led
 
 
+
+
+*****
+
+catpaw
+R9 - 49.4k, keep that
+gain of 2, adjust divider
+
+r4 - 0805 figure for sigout <10v
+div net - 1206
+6meg ohm total, 1 megohm each
+
+20:1
+
+beckoff sensors
+ethercat terminals
+ethercat boxes
+
+power with m8
+
+backpoewr with m12
+
+sw1 internal,
+back power to m12
+or provide via m8, 4 pin
+
+A-code M8
+white blue, 24v
+white black, 2nd 24v channel
+
+white and red are pos
+black and blue are 0v, returns
+powers hardware and ports separate
+
+m8 is power, m12 is sensor configuration, backfeeded
+
+dpdt
+
+internal dip switch, loop power
+
+currently, separate psu powering the ethercat via an m8
+this would remove that psu and use the RAC15
+
+
+ethercatbox manual
+	
+Up is bus power
+Us is logic power
+
+thisis a prototype one off for nathans lab
+
+
+3 form factors
+dinrail
+
+hammond, i/o portable
+
+ethercat, top down
+
+
+ethercatpoe
+
+singlepair ethernet
+	poweroverdataline
+
+catpaw, sooner rather than later
+
+plc
+new transformer, not 1:1
+redpitaya 1vp2p, adc
+114dv, driven with higher signal
+1.5:1 level shift to smaller signal
+
+
+
+catpaw cases: (open from top, lots of options)
+
+1551WYBK 	- 100x50x24	polycarb	8.43	digikey
+1551UBK		- 100x40x20	polycarb	4.89
+
+1555C2GY	- 120x65x41	polycarb UL	19,89	digikey
+1555CGY		- 120x65x41	abs		14.39
+		- 120x65x61
+
+1590ABK		- 92x38x31	alum		12.31	digikey
+
+
+07/14/26 1115a
+
+beckhoff analog i/o common gnd, isolated from every other gnd in box
+
+ethercat manual 4.2.1
+	powersupply notes
+4.2.1.1
+
+	Us - Control Voltage, supply for:
+		processor logic
+		fieldbus logic
+		analog I/O
+	Up - Peripheral Voltage, supply for:
+		ext sensor, 	M12 1, 2
+		ext actuator, 	M12 3, 4
+
+Supply Connector can be mismated with Ethercat connector (both M8)
+	this will damage processor if mismated
+	PSU is Black
+	Ethercat is Green
+
+Bottom M8 connectors (black) are Supply connectors	(sockets and pins are mirrored)
+they form pairs of Control Voltage and Peripheral Voltage with their respective gnds
+	1	Us		Brown
+	2	Up		White
+	3	Gnds		Blue
+	4	Gndp		Black
+	Shield	N/A		not connected
+
+4.2.1.3 conductor losses (voltage drop via cable length charts)
+
+4.2.2.1 Ethercat Connectors (note pinout) (neither is mirrored)
+
+	1	Tx+
+	2	Rx+
+	3	Rx-
+	4	Tx-
+	Shield		Shield is connected to housing, as well as the shield in the cables
+			(Not GND)
+
+Ethercat cables use 4 wires, at least CAT5.
+
+4.2.3.1 Signal Cables M12 sockets
+
+	Input 1/2
+	1	Up	sensor supply +	
+	2	In+	analog Input +
+	3 	GNDp	Sensor Supply gnd
+	4	In-	analog input -
+	5	Shield
+
+	there are situations where pin 3 and 4 should be bridged with cable
+		GNDp & In-
+	and
+		OutGND & GNDp
+
+	Output 3/4
+	1	Out	Analog Output
+	2	Up	Actuator Supply +
+	3	OutGND	analog gnd
+	4	GNDp	actuator supply gnd
+	5	Shield
+
+4.3 UL requirements
+	Fuse should be maximum of 4A on psu
+
+
+
+parsing the i/o
+
+the catpaw is the sensor.
+the beckhoff is the device.
+
+480v is the input to the catpaw which is the data
+	goes to divider and buffer to derive the data
+	the output of which goes to the beckhoff analog input +/-
+		analog input 1: pin 2, 4
+
+	typically 
+		with an external supply connected to beckhoff m8 power jack
+		power would be supplied to the sensor from pin 1, 3 on that m12
+		from the beckhoff m8 Up bus
+		m12 pin 1,3 would power the catpaw's active buffer
+		
+in our case:
+480v from catpaw input supplies power to the Rak 24Vdc PSU
+	which in turn powers the active buffer
+	this would also backfeed 24vDC through the m12, pin1,3 onto the Up bus in the beckhoff
+
+a switch will disconnect 480v from the rak psu
+	unpowering the buffer from the 480v
+	480v will still make it to the divider
+	
+	if an external psu was connected to the beckhoff via m8 power
+	power would still reach the buffer via m12 pin1,3
+
+we want to use the Rak psu to also provide beckhoff m8 power input
+	catpaw will have an m8 power output
+	to be connected to the bottom m8 beckhoff power input
+	we would bridge Us and Up before out power output connector
+so
+	catpaw m8
+	1	pwrout+	Us
+	2	pwrout+	Up
+	3	pwrout-	GNDs
+	4	pwrout-	Gndp
+this allows the device to be powered from the 480v catpaw input (through rakPSU)
+	rakpsu supplies Up device voltage
+			Us sensor voltage
+Us sensor voltage comes through m12 to pwrout+/-
+	they should be at the same potential (besides cable voltage drop)
+
+
+	
+
+
+on the beckhoff
+m8 power cable supplies both
+	Us, for powering the device (beckhoff internals)
+	Up, for powering the sensor
+	____
+	Up sensor power is delivered through the m12 
+		input 1,2 	pin 1,3
+		and output 3,4	pin 2,4
+	Us does not connect to the M12 connectors
+
+
+
+
+
+	
+
+

@@ -250,7 +250,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "may.kicad_pro",
+    "filename": "catpaw.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -412,6 +412,10 @@
     [
       "c6afa226-7a71-49a1-9fd2-6abf112b3631",
       "Root"
+    ],
+    [
+      "10e6bb49-f350-49cb-8550-57ea3a57f8d7",
+      "scribble"
     ]
   ],
   "text_variables": {}
