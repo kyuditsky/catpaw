@@ -27,6 +27,9 @@ output thru m12 A code 5 pin
 			right angle through hole phoenix contact 1436644
 	https://www.amazon.com/gp/product/B0FJWNNPST/ref=ewc_pr_img_2?smid=A3N6VO6KHWVD9F&th=1
 
+power out M8 phoenix contact
+	SACC- M8FS - SMD
+
 switch to shutoff PSU
 	onboard, passive or relay?	//where would it get power lol
 	right angle pcb/panel mount toggle
@@ -158,7 +161,7 @@ catpaw cases: (open from top, lots of options)
 1590ABK		- 92x38x31	alum		12.31	digikey
 
 
-07/14/26 1115a
+07/14/26 1115-415p
 
 beckhoff analog i/o common gnd, isolated from every other gnd in box
 
@@ -270,6 +273,10 @@ this allows the device to be powered from the 480v catpaw input (through rakPSU)
 Us sensor voltage comes through m12 to pwrout+/-
 	they should be at the same potential (besides cable voltage drop)
 
+	dont connect the rak to the active buffer in the catpaw
+		the buffer will always get its power from the m12
+	add polarity diodes to protect from backfeeding the catpaw through the m8
+
 
 	
 
@@ -285,9 +292,83 @@ m8 power cable supplies both
 	Us does not connect to the M12 connectors
 
 
+07/15/26	30min
 
+get gain of ina826 as low as possible,
+G = 1 + (49.4k / Rg)
+
+G = 1 + (49.4k / 1M) = 1.0494
+
+find target of divider:
+	10V / 1.0494 	= 9.529V
+
+add slight safety factor:
+			= 9.45V
+
+divider net with 480V & 3Mohm
+	60.4k = 9.47V	1%
+	59.0k = 9.25V	2%
+
+divider net with 480V & 4Mohm
+	80.6k = 9.48V	1%
+	75.0k = 8.83V	5%
+
+
+
+07/17/26 11a-230p
+
+
+jlcpcb parts - basic
+	0805 - 47k, 51k, 68k
+	1206 - 1M
+
+	using 3M & 51k = 480v = 8.02
+		8.02 * 1.0494 = 8.416V
+	not ideal, stick with 3M, 60.4k
+	
+Vout= G X (Vin+ - Vin-)
+G = 1 + 49.4k / Rg)
+G = 2
+
+G = 1 + 49.4k / 1M)
+G = 1.0494
+
+parsing Vout:
+Vin+ is the positive leg of 480Vac
+Vin- is the negative leg
+
+if they are equal, they will cancel out
+	Vout will be 0
+any differences in the signal will be amplified by INA826
+	with a gain of 1.0494 (functionally passed through)
+
+the divider is geared to present the 480Vac signal to the INA/Beckhoff 
+	as +/-10V peak to peak.
+
+if 480vac is brought to 10Vpp, the differences will be even smaller?
+
+divider:
+480V*60400 / (3000000+60400) = 9.47V
+
+INA826 gain:
+G = 1 + 49.4k / Rg)
+G = 1 + 49.4k / 1M)
+G = 1.0494
+
+9.47V * 1.0494 = 9.937V
+
+INA826 Vout:
+Vout= G X (Vin+ - Vin-)
+
+
+480Vac is not the target, PSU is rated for 277Vac
+	480vac is the upper limit safety factor
 
 
 	
+pcb
+80x39mm
 
+chosen m8,m12 widths: 12.8mm, 19.2mm = 32mm
+	should fit
 

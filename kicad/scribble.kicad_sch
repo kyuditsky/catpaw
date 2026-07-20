@@ -5,6 +5,156 @@
 	(uuid "656593ca-6a57-45c5-a863-ae60861bb83b")
 	(paper "A4")
 	(lib_symbols
+		(symbol "Switch:SW_Push"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 1.27 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "SW_Push"
+				(at 0 -1.524 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Push button switch, generic, two pins"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch normally-open pushbutton push-button"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_Push_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.27) (xy 0 3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.27) (xy -2.54 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 5.08 0 180)
+					(length 2.54)
+					(name "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "arrow_1"
 			(pin_numbers
 				(hide yes)
@@ -2035,6 +2185,18 @@
 		(uuid 234781db-3e23-4ca5-8be2-29af6b81f43c)
 	)
 	(rectangle
+		(start 151.765 100.965)
+		(end 168.275 132.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 240cc945-e748-4832-a6c6-2971578c0606)
+	)
+	(rectangle
 		(start 38.1 125.095)
 		(end 56.515 133.35)
 		(stroke
@@ -2081,6 +2243,16 @@
 			(type none)
 		)
 		(uuid e21f3d61-4dc0-4507-a673-ce7a032d76ee)
+	)
+	(text "catpaw"
+		(exclude_from_sim no)
+		(at 155.194 99.314 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "31bb6f94-fcd4-4bc6-a3b6-bea41e1b33e2")
 	)
 	(text "catpaw"
 		(exclude_from_sim no)
@@ -2516,6 +2688,12 @@
 			(uuid "5602ed6d-931f-4ad7-a2f5-5348801acacb")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a5")
@@ -2585,6 +2763,12 @@
 			(uuid "d5c9dbd5-41a6-44d0-aa2a-34c3283a213e")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a6")
@@ -2654,6 +2838,12 @@
 			(uuid "a4dc8c49-c060-4a73-9f94-702415390b42")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a2")
@@ -2723,6 +2913,12 @@
 			(uuid "f6a5bd3e-f6e9-4d13-8b37-7a01667ff237")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a12")
@@ -2793,6 +2989,12 @@
 			(uuid "2348c9d3-1425-4271-a166-b43a64b056df")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a4")
@@ -2863,6 +3065,12 @@
 			(uuid "11d7065a-4b72-46d5-8cf0-2a2c5ab375cd")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a13")
@@ -2933,6 +3141,12 @@
 			(uuid "390e8ee3-6b1e-42df-a317-0724526dcdfb")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a8")
@@ -3002,6 +3216,12 @@
 			(uuid "d3b778d8-917e-457b-979f-e2858bd7d6d1")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a14")
@@ -3072,6 +3292,12 @@
 			(uuid "054fd9dc-0a93-4fa5-9a04-c03a12d961ee")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a7")
@@ -3142,6 +3368,12 @@
 			(uuid "0bfdb016-88e1-41d8-a484-4270c8dbd622")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a11")
@@ -3211,6 +3443,12 @@
 			(uuid "b8a2ad24-41d7-4f46-88d8-92e01f283109")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a3")
@@ -3281,9 +3519,91 @@
 			(uuid "c708c165-a214-40d7-95ba-9bbb65883f59")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_Push")
+		(at 92.71 55.88 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dc170725-54d2-447c-83be-0a28e592c6c2")
+		(property "Reference" "SW?"
+			(at 93.98 54.6099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "SW_Push"
+			(at 93.98 57.1499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 87.63 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 87.63 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Push button switch, generic, two pins"
+			(at 92.71 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6425731e-5702-44d1-b541-478172ca43ed")
+		)
+		(pin "1"
+			(uuid "4cf4a181-2ff2-45d9-999b-606b6e002be4")
+		)
+		(instances
+			(project ""
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+			(project "catpaw"
+				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
+					(reference "SW?")
 					(unit 1)
 				)
 			)
@@ -3351,6 +3671,12 @@
 			(uuid "91b09255-098c-41fa-b6e2-3feddac5ec54")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a9")
@@ -3420,6 +3746,12 @@
 			(uuid "7c03f80a-6d05-4951-8f40-f57f4838d71d")
 		)
 		(instances
+			(project "scribble"
+				(path "/656593ca-6a57-45c5-a863-ae60861bb83b"
+					(reference "a?")
+					(unit 1)
+				)
+			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
 					(reference "a1")
@@ -3428,4 +3760,10 @@
 			)
 		)
 	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
 )

@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CDM845-04A-FP-F010-67
+D 4 Pins, PCB Panel Mount, PC Pins, Right Angle, Front Fastened M8 x 1.0, A-Coding, Screw Copper Alloy, IP67, M8 Male Circular Connector Jack
+K
+F https://www.sameskydevices.com/product/resource/cdm845.pdf
+$ENDCMP
+#
+#End Doc Library

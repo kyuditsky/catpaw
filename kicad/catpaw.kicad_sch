@@ -2612,7 +2612,7 @@
 		)
 		(uuid "0aa234ae-6ebe-4cda-80d0-ae57cede1a60")
 	)
-	(text "divider setup to make 480vac =<5V"
+	(text "divider setup to make 480vac =<9.52V"
 		(exclude_from_sim no)
 		(at 65.786 136.652 0)
 		(effects
@@ -2634,12 +2634,12 @@
 	)
 	(text "7/14/26\n480*62000 / (3000000+62000) = 9.72V \nnote gain will equal 2\n9.72v * 2 = 19.44\nso:\nR4 = 30k, Vout = 4.75v\nwith gain of 2 = 9.5V"
 		(exclude_from_sim no)
-		(at 19.304 169.164 0)
+		(at -2.032 154.432 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "134ea3f6-7303-423e-bc99-11a200059c80")
 	)
@@ -2673,6 +2673,17 @@
 			)
 		)
 		(uuid "3756c8f3-f6b7-45c6-8c31-0c8bfac1f398")
+	)
+	(text "277Vac = 5.466V\n5.488 * 1.0494 = 5.76V"
+		(exclude_from_sim no)
+		(at 50.546 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "385445d5-659f-442c-a649-edb29abf8e29")
 	)
 	(text "m8 Up+- & m12 Up+- \nare connected in beckhoff"
 		(exclude_from_sim no)
@@ -2759,12 +2770,12 @@
 	)
 	(text "double check Rg formula, appears gain cannot be equal to or lower than 1\nGain will equal 2\nrework divider network to lower input voltage, use 1M 1206 resistors\ncalculate new R4 value\n"
 		(exclude_from_sim no)
-		(at 18.796 156.21 0)
+		(at -2.54 138.938 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
 		(uuid "9fe9a722-7456-4597-af06-8ad71c1eee19")
 	)
@@ -2777,6 +2788,17 @@
 			)
 		)
 		(uuid "b244f2c0-975d-4049-a2e5-b459fd3b85f4")
+	)
+	(text "07/17/26\nupdated gain\nG = 1.0494\ndivider: 3m , 60.4k\n480V = 9.47V\n9.47V * 1.0494 = 9.937V"
+		(exclude_from_sim no)
+		(at -2.54 169.164 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "bf6c83c2-9d0e-46b4-886e-678aa5c8b17e")
 	)
 	(text "thruhole LED\npanelmount"
 		(exclude_from_sim no)
@@ -2809,13 +2831,14 @@
 		)
 		(uuid "db9f4f17-d870-4f43-9b80-443432bd429f")
 	)
-	(text "Vout= G X (Vin+ - Vin-)\nG = 1 + 49.4k / Rg)\nG = 2"
+	(text "Vout= G X (Vin+ - Vin-)\nG = 1 + 49.4k / Rg)\nG = 2\n\nG = 1 + 49.4k / 1M)\nG = 1.0494"
 		(exclude_from_sim no)
-		(at 112.776 151.638 0)
+		(at 100.33 153.67 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left)
 		)
 		(uuid "dc567bdf-0aea-41aa-a7c9-b880eab66c40")
 	)
@@ -7245,28 +7268,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "37a87af6-fb12-4456-8d9e-a0248f5d7aa7")
+			(uuid "37a87af6-fb12-4456-8d9e-a0248f5d7aa8")
 		)
 		(pin "7"
-			(uuid "b2fb2763-73eb-4d97-a8f8-1a3caf7878c8")
+			(uuid "b2fb2763-73eb-4d97-a8f8-1a3caf7878c9")
 		)
 		(pin "8"
-			(uuid "3d921456-1598-47e1-839b-31db1d497efe")
+			(uuid "3d921456-1598-47e1-839b-31db1d497eff")
 		)
 		(pin "4"
-			(uuid "380ebfbc-3973-476f-be57-4be7a19aa670")
+			(uuid "380ebfbc-3973-476f-be57-4be7a19aa671")
 		)
 		(pin "1"
-			(uuid "5fae26e7-c6f6-4186-aa65-355821190cd6")
+			(uuid "5fae26e7-c6f6-4186-aa65-355821190cd7")
 		)
 		(pin "5"
-			(uuid "f526d254-fc6e-4ee3-80f8-4ec12f9a95b6")
+			(uuid "f526d254-fc6e-4ee3-80f8-4ec12f9a95b7")
 		)
 		(pin "3"
-			(uuid "2d134755-fcd8-45d0-b542-acfcd5f082d3")
+			(uuid "2d134755-fcd8-45d0-b542-acfcd5f082d4")
 		)
 		(pin "2"
-			(uuid "6d8264c0-3430-4c19-b174-05478774e1d8")
+			(uuid "6d8264c0-3430-4c19-b174-05478774e1d9")
 		)
 		(instances
 			(project ""
@@ -7492,8 +7515,8 @@
 				)
 			)
 		)
-		(property "Value" "30k"
-			(at 90.678 138.176 0)
+		(property "Value" "60.4k"
+			(at 89.916 137.922 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7699,28 +7722,28 @@
 			)
 		)
 		(pin "6"
-			(uuid "37a87af6-fb12-4456-8d9e-a0248f5d7aa7")
+			(uuid "37a87af6-fb12-4456-8d9e-a0248f5d7aa9")
 		)
 		(pin "7"
-			(uuid "b2fb2763-73eb-4d97-a8f8-1a3caf7878c8")
+			(uuid "b2fb2763-73eb-4d97-a8f8-1a3caf7878ca")
 		)
 		(pin "8"
-			(uuid "3d921456-1598-47e1-839b-31db1d497efe")
+			(uuid "3d921456-1598-47e1-839b-31db1d497f00")
 		)
 		(pin "4"
-			(uuid "380ebfbc-3973-476f-be57-4be7a19aa670")
+			(uuid "380ebfbc-3973-476f-be57-4be7a19aa672")
 		)
 		(pin "1"
-			(uuid "5fae26e7-c6f6-4186-aa65-355821190cd6")
+			(uuid "5fae26e7-c6f6-4186-aa65-355821190cd8")
 		)
 		(pin "5"
-			(uuid "f526d254-fc6e-4ee3-80f8-4ec12f9a95b6")
+			(uuid "f526d254-fc6e-4ee3-80f8-4ec12f9a95b8")
 		)
 		(pin "3"
-			(uuid "2d134755-fcd8-45d0-b542-acfcd5f082d3")
+			(uuid "2d134755-fcd8-45d0-b542-acfcd5f082d5")
 		)
 		(pin "2"
-			(uuid "6d8264c0-3430-4c19-b174-05478774e1d8")
+			(uuid "6d8264c0-3430-4c19-b174-05478774e1da")
 		)
 		(instances
 			(project ""
