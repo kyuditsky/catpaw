@@ -3543,7 +3543,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "dc170725-54d2-447c-83be-0a28e592c6c2")
-		(property "Reference" "SW?"
+		(property "Reference" "SW2"
 			(at 93.98 54.6099 90)
 			(effects
 				(font
@@ -3603,7 +3603,7 @@
 			)
 			(project "catpaw"
 				(path "/c6afa226-7a71-49a1-9fd2-6abf112b3631/10e6bb49-f350-49cb-8550-57ea3a57f8d7"
-					(reference "SW?")
+					(reference "SW2")
 					(unit 1)
 				)
 			)
