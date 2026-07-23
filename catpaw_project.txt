@@ -372,3 +372,12 @@ pcb
 chosen m8,m12 widths: 12.8mm, 19.2mm = 32mm
 	should fit
 
+RAK dimensions wont fit in plucker case
+moving up to 80x78x43mm case
+	1455K801BK
+
+
+
+07/23/26 BOM work 915a-1245pm (3.5)
+
+
