@@ -1,9 +1,0 @@
-Manufacturer=LITTELFUSE
-PartNumber=0461002.ER
-PartCategory=Fuse
-PackageCategory=Fuses Chip
-PinCount=2
-Version=3.1
-Released=2017-10-10 10:06:58
-Downloaded=2026-07-20 17:21:59
-3D=Y
