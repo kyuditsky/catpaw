@@ -381,7 +381,9 @@ moving up to 80x78x43mm case
 07/23/26 BOM work 915a-1245pm (3.5)
 
 
-07/30/26 JULY26 parts order delivered
+07/30/26 945-145 (4)
+
+JULY26 parts order delivered
 
 hammond case will have 10-11mm clearance under the pcb to case
 
@@ -404,6 +406,14 @@ blk jack, 17mm offcenter
 led pads to board edge = ~6mm
 
 switch, center to board center = 22mm
+
+****
+>consider test points
+
+>JLCJLCJLCJLCJLC
+****
+
+
 
 
 
