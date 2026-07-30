@@ -381,3 +381,29 @@ moving up to 80x78x43mm case
 07/23/26 BOM work 915a-1245pm (3.5)
 
 
+07/30/26 JULY26 parts order delivered
+
+hammond case will have 10-11mm clearance under the pcb to case
+
+M-connectors: o-rings go on the backside of the panel
+
+center of board is 37.5mm
+center of enclosure is 39mm
+
+distance between m8.m12 centers = 34mm 
+distance to and from centers = 	17mm
+
+m8 pin 1 to board edge = 8.5mm
+m12 pin 5 to board edge = 12.5mm
+
+PCB dimensions : 75mm wide, 79mm long (0.5mm clearance either side of end plates)
+
+red jack, centered
+blk jack, 17mm offcenter
+
+led pads to board edge = ~6mm
+
+switch, center to board center = 22mm
+
+
+
