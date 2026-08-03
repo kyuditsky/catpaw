@@ -378,7 +378,7 @@ moving up to 80x78x43mm case
 
 
 
-07/23/26 BOM work 915a-1245pm (3.5)
+07/23/26 BOM work 915a-1245pm (4)
 
 
 07/30/26 945-145 (4.5)
@@ -409,6 +409,8 @@ switch, center to board center = 22mm
 
 ****
 >consider test points
+	added jumper points for header pins and/or Zero ohm resistors
+	for testing
 
 >JLCJLCJLCJLCJLC, (not needed anymore)
 ****
