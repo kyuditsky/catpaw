@@ -9508,18 +9508,6 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "JLCJLCJLCJLCJLC"
-		(at 180.721 110.744 -0)
-		(layer "B.SilkS")
-		(uuid "ad0a88f1-c3d7-4f66-bb5a-41ff8a62ff8e")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.1)
-			)
-			(justify left bottom mirror)
-		)
-	)
 	(gr_text "40mm open space within the enclosure\n1.6mm pcb thickness"
 		(at 179.07 179.324 0)
 		(layer "User.2")

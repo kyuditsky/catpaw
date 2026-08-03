@@ -381,7 +381,7 @@ moving up to 80x78x43mm case
 07/23/26 BOM work 915a-1245pm (3.5)
 
 
-07/30/26 945-145 (4)
+07/30/26 945-145 (4.5)
 
 JULY26 parts order delivered
 
@@ -410,7 +410,7 @@ switch, center to board center = 22mm
 ****
 >consider test points
 
->JLCJLCJLCJLCJLC
+>JLCJLCJLCJLCJLC, (not needed anymore)
 ****
 
 
