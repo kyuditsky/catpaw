@@ -659,7 +659,7 @@
 		(property "Reference" "J3"
 			(at 9.288 -1.29 180)
 			(layer "F.SilkS")
-			(uuid "fc1beee8-5ff4-4dda-b776-ede1e19d9dda")
+			(uuid "2dab99e0-3a18-4a92-9f02-06951b10869a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -671,7 +671,7 @@
 			(at -1.768 12.012 90)
 			(layer "F.SilkS")
 			(hide yes)
-			(uuid "3adc4a40-a750-4c52-aacf-84cf57b4e41f")
+			(uuid "d88e715e-d788-40c5-9926-0f4b0db79b70")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -683,7 +683,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "24072f8e-27fa-429e-a312-7108795d8200")
+			(uuid "6f8ba327-d36b-4508-a15a-fca5b01c24be")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -695,7 +695,7 @@
 			(at 0 0 90)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "fad8dadc-c7a6-4523-ad1b-3e543568ddc6")
+			(uuid "f0635990-1386-4786-9434-ad1382bb505a")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9310,6 +9310,17 @@
 		(layer "User.2")
 		(uuid "0e0ddb2c-dfc0-4851-89c3-f826ac7dae19")
 	)
+	(gr_rect
+		(start 210.886 53.34)
+		(end 250.886 106.34)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill no)
+		(layer "User.2")
+		(uuid "20fc8eac-6e68-4633-84c7-de874ee1dd96")
+	)
 	(gr_line
 		(start 187.188 115.824)
 		(end 187.188 113.324)
@@ -9520,6 +9531,44 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "adjust vcc/vee jumper footprint to 2.54 vertical header pins"
+		(at 170.434 36.449 0)
+		(layer "User.2")
+		(uuid "42b18500-ab35-407d-9e66-6f20bb54b71b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "amphenol gives 5.8mm to pcb edge\nsee m12 tech datasheet"
+		(at 191.008 113.03 0)
+		(layer "User.2")
+		(uuid "72e5f709-df0c-49c4-8091-09639878a422")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "rac20-24sk/277"
+		(at 160.274 70.993 90)
+		(layer "User.2")
+		(uuid "7e9ec527-545f-4879-8c30-fa3b847fdba7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "07/20/26"
 		(at 207.01 193.802 0)
 		(layer "User.2")
@@ -9544,6 +9593,19 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "move f1 away from exposed vac pad (8mm)"
+		(at 130.302 117.983 0)
+		(layer "User.2")
+		(uuid "b824ab04-6b2d-4005-af36-1f6a0bb14cbd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "dimensions:	75mm wide (hammond callout)\n			79mm long (1mm less than hammond case)"
 		(at 233.934 22.352 0)
 		(layer "User.2")
@@ -9552,6 +9614,18 @@
 			(font
 				(size 1 1)
 				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "rac15-24sk/480"
+		(at 219.71 57.15 0)
+		(layer "User.2")
+		(uuid "e795783f-9628-41b0-af9e-f3c296262266")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
 			)
 			(justify left bottom)
 		)

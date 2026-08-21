@@ -417,5 +417,105 @@ switch, center to board center = 22mm
 
 
 
+08/19/26 915a
+
+oshpark delivered 08/17
+smd installed 08/18
+
+psu in hand is rac15-24sk/480 which is 40mm wide at base
+	pcb footprint for PSU1 is rac20-24sk/277
+	which is 27mm at base
+
+will order rac20-24sk/277
+	this puts the catpaw at strictly 277vac max
+
+m12 jack on catpaw is amphenol female: M12A-05PFFR-SF7003
+	due to power coming in on that connector
+	it should be m12 male
+	will replace with M12A-05PMMR-SF7003
 
 
+
+on testing without jacks installed nor PSU
+	24vdc can be supplied via the riden supply to test pads VCC, VEE
+	GND is created at REF via LM1458
+		12V+/- should be at VCC/VEE in respect to GND
+
+switch should not be needed yet
+	it cuts/sends power to the PSU pads through F1
+
+plan:
+	hook up ridenpsu
+		24vdc 500ma, check draw
+	test power pins
+		both ICs have a 3V+- 18V+- input power range
+			(6v-36v single supply)
+		expect 24vdc at each
+
+result:
+	23.9vdc across VCC/VEE
+	11.9v VCC to gnd
+	-11.9v VEE to gnd
+	draw: 3mA
+	lm1458 supply pins: good
+	ina826 supply pins: good
+
+gnd is created via lm1458 U2A opamp: good
+
+LED: function - light when RAC20 is powered via switch
+	should not light when rac20 is unpowered
+	should not light when power is delivered via ext M8
+	
+voltage at U2B opamp for LED is derived from rakout+-
+	without rac installed: led driver pin: -9.9vdc to gnd
+		*unexpected
+-7.2 -5.3 across diode (2.1v drop, looks good)
+why is voltage backwards
+voltage at U2 pin 5, non-inverting input, -7.6V (in reference to gnd)
+	derived from a 4.7k & 1k divider at rakout+-
+	expected 2.3v
+	pin5 = 4.2v in ref to rakout-
+	led draws 5mA
+note:
+note:	appears to light only when reversed polarity from expected
+note:
+
+conclude: 	functions in reverse polarity
+		may be an issue with connection to gnd on cathode side
+		consider connecting to rakout- instead
+
+
+
+send 5V:	waveform1 through vac+
+		waveform2 through vac-
+	scope1 on m12 
+		2,sig+, 
+		4, sig- (gnd)
+
+
+running 5v 1kHz sine wave through Waveform1,2
+scope on m12 sig out+ & gnd
+	AC RMS: 14.3mV
+	peak2peak: 48mV
+
+divider calc of 5vin, 3M & 60.4k ohm gives: 0.0986v
+	with gain of 1.0494 = 0.103V or 100mV
+
+	RMS & p2p shift based on frequency of input
+
+regardless, a good waveform is produced on the ouput
+	changing the waveshape on either input combines the two
+	with consistant results
+
+note all tests were performed without a load resistor installed
+
+1130a
+
+network tests
+both sides of VacIn test similar if not identical
+	approx-40db attenuation
+	peaks at 80kHz and steadily drops off at 100kHz
+
+	
+1245p
+	
