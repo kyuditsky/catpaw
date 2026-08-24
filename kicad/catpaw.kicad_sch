@@ -3087,6 +3087,17 @@
 		)
 		(uuid "e5692174-89bd-4001-9a5c-bea73916aec2")
 	)
+	(text "RAC15-24sk/480 has a larger footprint than called for. \nSubstituting RAC10-24SK/277 instead."
+		(exclude_from_sim no)
+		(at 109.728 115.316 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f949ba42-483c-42c8-b58e-e84abc86b2db")
+	)
 	(junction
 		(at 255.27 148.59)
 		(diameter 0)

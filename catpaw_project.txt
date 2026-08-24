@@ -527,3 +527,19 @@ ordered from digikey instead
 	need to connect a business profile to my account
 	and keep separate personal & business purchases for their sake
 	
+
+created wiki page
+cloned wiki git to /catpaw/catpaw.wiki
+added /catpaw.wiki/ to .gitignore
+	it is its own repo within catpaw/
+		requires it's own push/pulls and versioning
+	authentication issue pushing from terminal
+	'gh auth login'
+	reauth using https
+
+intend to create a general rowhome repo
+	with a wiki, and link to the all the other wiki's
+	this will at the very least require me to generate docs for each project
+	in markdown format
+
+
