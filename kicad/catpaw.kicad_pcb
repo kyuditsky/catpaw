@@ -9628,6 +9628,19 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "LED needs reworked.\nwill only light if both PSU is powered AND catpaw internals are powered\nit is not always the most intuitive haptic"
+		(at 97.282 28.829 0)
+		(layer "User.2")
+		(uuid "d96e8e4c-5236-46e7-baf9-427c37d668fb")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "rac15-24sk/480"
 		(at 219.71 57.15 0)
 		(layer "User.2")
