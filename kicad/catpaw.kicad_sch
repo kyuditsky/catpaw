@@ -6325,7 +6325,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.ti.com/lit/gpn/ina821"
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina826.pdf"
 			(at 113.538 110.998 0)
 			(effects
 				(font
