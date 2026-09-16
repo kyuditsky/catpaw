@@ -9579,7 +9579,7 @@
 			(justify left bottom)
 		)
 	)
-	(gr_text "07/20/26"
+	(gr_text "09/16/26"
 		(at 207.01 193.802 0)
 		(layer "User.2")
 		(uuid "966061d3-efa5-4af0-b8f7-4d077407e1dd")
@@ -9611,6 +9611,19 @@
 			(font
 				(size 1 1)
 				(thickness 0.25)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "rev1.1"
+		(at 187.706 190.373 0)
+		(layer "User.2")
+		(uuid "c9e94d5d-cc68-4888-8fcb-c8f2c7cf3ff9")
+		(effects
+			(font
+				(size 1.5 1.5)
+				(thickness 0.3)
 				(bold yes)
 			)
 			(justify left bottom)
