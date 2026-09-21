@@ -953,7 +953,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text ".ac dec 10 1 10000k"
+	(text ".ac dec 10 1 1000k"
 		(exclude_from_sim no)
 		(at 54.864 113.538 0)
 		(effects
@@ -2165,7 +2165,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Library" "INA826_sbomc48/ina826.lib"
+		(property "Sim.Library" "INA826_sbomc48/ina826_updated.lib"
 			(at 166.37 96.52 0)
 			(effects
 				(font
@@ -2192,7 +2192,7 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Pins" "1=IN- 2=RG+ 3=RG- 4=IN+ 5=GND 6=REF 7=OUT 8=VDD"
+		(property "Sim.Pins" "1=IN- 2=RG+ 3=RG- 4=IN+ 5=VNEGP 6=REF 7=OUT 8=VDD"
 			(at 166.37 96.52 0)
 			(effects
 				(font
